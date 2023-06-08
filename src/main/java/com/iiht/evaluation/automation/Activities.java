@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import static com.iiht.evaluation.automation.Helpers.*;
 
 public class Activities {
 	
@@ -25,13 +26,14 @@ public class Activities {
 	
 	public boolean calculateHomeLoanEMI(WebDriver driver) throws InterruptedException
 	{
-
 		return false;
 	}
 	
 	public String getTotalPayment(WebDriver driver) throws Exception{
 		return "";
 	}
+	
+	
 	
 	public String getEMI(WebDriver driver) throws Exception{
 		return "";
