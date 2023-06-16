@@ -4,7 +4,7 @@ package com.iiht.evaluation.automation.functional;
 import static com.iiht.evaluation.automation.testutils.TestUtils.businessTestFile;
 import static com.iiht.evaluation.automation.testutils.TestUtils.currentTest;
 import static com.iiht.evaluation.automation.testutils.TestUtils.yakshaAssert;
-
+import java.util.concurrent.TimeUnit;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -40,6 +40,7 @@ public class AutomationTest {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		String baseUrl = "https://www.moneycontrol.com/"; 
 		driver.get(baseUrl);
 	}
